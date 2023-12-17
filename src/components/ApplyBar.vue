@@ -36,7 +36,7 @@ export default{
 <style scoped>
 .registration-section {
     background-color: #fffafa;
-    padding: 50px 0;
+    padding: 20px 0;
     margin-bottom: 0px;
 }
 
