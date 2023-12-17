@@ -1,11 +1,9 @@
 <template>
 <div class="body">
-    <NavBar />
+    <NavBar/>
 
-    <div class="slide-img">
-        <img class="slider" src="../assets/slide/img2.jpg">
-    </div>
-
+    <SlideShow/>
+ 
     <div class="welcome-section">
         <div class="container">
             <div class="background-image">
@@ -30,51 +28,45 @@
         </div>
     </div>
 
-    <div class="footer-section">
-        <div class="ftcontainer">
-            <div class="bgimg">
-                <img src="../assets/footer-bg-2.jpg">
-            </div>
-            <div class="overlay">
-                <div class="footer-row">
-                    <div class="footer-column">
-                        <h3>Resources</h3>
-                            <ul>
-                                <li><a href="#">Calendar</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Activities</a></li>
-                            </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>About Us</h3>
-                        <p>
-                        </p>
-                    </div>
-                    <div class="footer-column">
-                            <img src="../assets/menulogo.png">
-                            <p>
-                                Himalayan Academy Boarding School,<br>
-                                Sallaghari, Bhaktapur<br>
-                                +977 981-0136313<br>
-                                contact@habs.edu.np<br>
-                            </p>
-                    </div>
+    <div class="video-section">
+        <div class="vcontainer">
+            <div class="vcontent">
+                <div class="vidtext">
+                    <h2>Storytime With Principal</h2><br>
+                    <p>At HABS, we aim to create an atmosphere where students feel inspired, supported, and encouraged to excel not just academically but also in their personal growth and relationships. <br>
+                        <br>Join our Principal for captivating 'Storytime with Principal' sessions on YouTube! Delight in tales that spark imagination and learning, specially curated for young minds. These engaging story sessions foster a love for reading and discovery among our students, creating cherished moments of shared learning and joy.
+                    </p>
+                </div>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-Z1ldscWMf4?si=j4S1s2epBQgAv3hf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="ft-desc">
+        <img src="../assets/foot-desc.png" >
+    </div>
+    
+    <ApplyBar/>
+
+    <FooterBar/>
+
 </div>
 </template>
 
-<script setup>
-import NavBar from '../components/NavBar.vue'
+<script>
+import FooterBar from '@/components/FooterBar.vue';
+import NavBar from '../components/NavBar.vue';
+import ApplyBar from '../components/ApplyBar.vue';
+import SlideShow from '../components/SlideShow.vue'
+export default {
+    components: { NavBar, FooterBar, ApplyBar, SlideShow }
+}
+
 </script>
 
 <style scoped>
-.slider {
-    width: 100%;
-    height: 400px;
-}
 .welcome-section {
     padding: 40px 0;
 }
@@ -87,7 +79,7 @@ import NavBar from '../components/NavBar.vue'
 
 .background-image {
     width: 1100px;
-    height: 641px;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -127,41 +119,33 @@ import NavBar from '../components/NavBar.vue'
     padding: 0 20px;
 }
 
-.welcome-text h3{
+.welcome-text h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
     color: #ff4b4b;
-} 
-.welcome-text p{
+}
+
+.welcome-text p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
 }
 
-
-
-.footer-section{
+.video-section {
     padding: 40px 0;
+    background-color: #fdfdfd;
+
 }
-.ftcontainer{
-    width: 100%;
+
+.vcontainer {
+    width: 80%;
     margin: auto;
     position: relative;
-}
-.bgimg{
-    width: 100%;
-    height: 400px;
+    width: 1100px;
+    height: 300px;
     overflow: hidden;
 }
-.bgimg img{
-    width: 100%;
-    height: 400px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-.overlay{
+
+.vcontent {
     position: absolute;
     top: 0;
     left: 0;
@@ -171,43 +155,25 @@ import NavBar from '../components/NavBar.vue'
     justify-content: space-between;
     align-items: center;
 }
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 50px;
-  padding-bottom: 10px;
+
+.video,
+.vidtext {
+    width: 50%;
+    max-width: 550px;
 }
 
-.footer-column {
-  flex: 0 0 50%;
-  margin-left: 40px;
+.vidtext h2 {
+    color: #ff4b4b;
 }
 
-.footer-column img {
-  height: 65px;
-  top: 0;
-  left: 0;
-  margin-bottom: 10px;
-  margin-left: -20px
-}
-.footer-column p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.vidtext p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
-
-}
-.footer-column ul {
-  margin-left: 40px;
-  list-style: none;
-  padding: 0;
 }
 
-.footer-column ul li {
-  margin-bottom: 10px;
-  margin-left: -20px;
-}
 
-.footer-column ul li a {
-  color: #000000;
-  text-decoration: none;
+.ft-desc{
+    width: 100% auto;
+    height: auto;
 }
 </style>
