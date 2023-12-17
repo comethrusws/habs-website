@@ -9,6 +9,7 @@
       <router-link to="/admissions" class="nav-link">Admissions</router-link>
       <router-link to="/about" class="nav-link">About Us</router-link>
       <router-link to="/notice" class="nav-link">Notice Board</router-link>
+      <router-link to="/gallery" class="nav-link">Gallery</router-link>
       <router-link to="/contact" class="nav-link">Contact Us</router-link>
       <b class="login"> <i class="fa-solid fa-lock"></i>  Student Login</b>
 
@@ -24,22 +25,27 @@ export default {
 
 <style scoped>
 .login{
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 12px;
   font-weight: 600;
 }
 .login:hover{
   cursor: pointer;
-  color: rgb(255, 255, 0);
+  color: #ff4b4b;
 }
 .navbar {
   width: 100%;
   height: 30px;
-  background-color: rgb(247, 11, 11);
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0; 
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .left-side {
   display: flex;
@@ -61,15 +67,16 @@ export default {
 
 .nav-link {
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-right: 15px; 
 }
 .nav-link:hover{
   font-style: normal;
-  color: #000000;
+  transition: 0.3s;
+  color: #ff4b4b;
 }
 
 </style>

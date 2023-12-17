@@ -1,21 +1,23 @@
 <template>
     <div class="news">
       <b class="news-list">NEWS:</b>
-      <marquee class="headquote" behavior="smooth"><i>New Admissions Open For The Academic Year 2081 | Vacancies Open For 3 Posts | Himalayan Academy Boarding School, Sallaghari, Bhaktapur | Contact No: +977 9810136313</i></marquee>
+      <marquee class="headquote" behavior="smooth" style="animation: infinite;"><i>New Admissions Open For The Academic Year 2081 | Vacancies Open For 3 Posts | Himalayan Academy Boarding School, Sallaghari, Bhaktapur | Contact No: +977 9810136313</i></marquee>
       <b>|  </b>
+      <b style="font-size: 12px; font-weight: 200;"><i class="fa-solid fa-phone"></i> +977-9810136313</b>
+      <b>|   </b>
       <b class="login"><i class="fa-solid fa-lock"></i>  Student Login</b>
     </div>
 
   <div class="navbar">
     <div class="left-side">
-      <img src="../assets/mlogo.png" alt="mlogo" class="logo" />
+      <router-link to="/" class="logo" ><img src="../assets/mlogo.png" alt="mlogo" class="logo" /></router-link>
     </div>
 
     <div class="right-side">
-      <router-link to="/" class="nav-link">Home</router-link>
       <router-link to="/admissions" class="nav-link">Admissions</router-link>
       <router-link to="/about" class="nav-link">About Us</router-link>
       <router-link to="/notice" class="nav-link">Notice Board</router-link>
+      <router-link to="/gallery" class="nav-link">Gallery</router-link>
       <router-link to="/contact" class="nav-link">Contact Us</router-link>
 
     </div>
@@ -35,14 +37,14 @@ export default {
   padding: 0px 0px;
   margin: 0px;
   height: 17px;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: rgb(228, 228, 228);
+  color: rgb(0, 0, 0);
 }
 .news-list{
   margin-left: 10px;
   margin: 10px 10px 0px 0px;
-  background-color: white;
-  color: rgb(255, 57, 57);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 12px;
   padding-top: 4px;
   padding-bottom: 0px;
@@ -50,28 +52,32 @@ export default {
 
 .headquote{
   font-size: 12px;
-  width: 85%;
+  width: 79%;
   margin-bottom: 1px;
-  color: rgb(255, 255, 0);
+  color: rgb(0, 0, 0);
 }
 
 .login{
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 12px;
   margin-bottom: 1px;
   font-weight: lighter;
 }
 .login:hover{
   cursor: pointer;
-  color: rgb(255, 255, 0);
+  color: #ff4b4b;
 }
 .navbar {
   width: 100%;
-  height: 30px;
-  background-color: rgb(247, 11, 11);
+  height: 40px;
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0; 
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .left-side {
@@ -82,7 +88,7 @@ export default {
 
 .logo {
   width: auto;
-  height: 30px; 
+  height: 40px; 
 }
 
 .right-side {
@@ -94,15 +100,18 @@ export default {
 
 .nav-link {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  display: inline-block;
   margin-right: 20px; 
+  line-height: 40px;
 }
 .nav-link:hover{
-  font-style: italic;
-  color: #000000;
+  background-color: #e4e4e4;
+  transition: 0.3s;
+  color: #ff4b4b;
 }
 
 </style>

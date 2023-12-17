@@ -3,17 +3,19 @@ import HomePage from '../views/HomePage.vue'
 import AboutUs from '../views/AboutUs.vue'
 import AdmissionIn from '../views/AdmissionIn.vue'
 import NoticeBoard from '../views/NoticeBoard.vue'
+import PhotoGallery from '../views/PhotoGallery.vue'
 import ContactUs from '../views/ContactUs.vue'
 const routes = [
   {
     path: '/',
     component: HomePage,
-    meta: { title: 'Home|HABS' }
+    meta: { title: 'Home - HABS' }
   },
   { path: '/about', component: AboutUs, meta: { title: 'About Us' }  },
   {  path: '/admissions', component: AdmissionIn, meta: { title: 'Admissions' } },
   {  path: '/notice', component: NoticeBoard, meta: { title: 'Notices' } },
   {  path: '/contact', component: ContactUs, meta: { title: 'Contact Us' } },
+  {  path: '/gallery', component: PhotoGallery, meta: { title: 'Gallery' } },
 
 ];
 
