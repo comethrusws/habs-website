@@ -173,7 +173,20 @@ export default {
 
 
 .ft-desc{
-    width: 100% auto;
-    height: auto;
+    width: 80%;
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+
+}
+.ft-desc img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 </style>

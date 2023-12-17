@@ -43,6 +43,7 @@ export default{
 .registration-container {
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .registration-row {
