@@ -1,7 +1,7 @@
 <template>
     <div class="slideshow">
       <transition name="fade">
-        <img :key="currentImage" :src="currentImage" alt="Slideshow Image" class="slide" />
+        <img :key="currentImage" :src="currentImage" class="slide" />
       </transition>
     </div>
   </template>  
@@ -12,13 +12,14 @@ export default {
     data() {
         return {
             images: [
-                require('@/assets/slide/img1.jpg'),
-                require('@/assets/slide/img2.jpg'),
-                require('@/assets/slide/slider.jpg'),
+                require('@/assets/slide/img1.gif'),
+                require('@/assets/slide/img2.gif'),
+                require('@/assets/slide/img3.gif'),
+                require('@/assets/slide/img4.gif'),
             ],
             currentIndex: 0,
             intervalId: null,
-            intervalDuration: 4000,
+            intervalDuration: 4500,
         };
     },
     computed: {

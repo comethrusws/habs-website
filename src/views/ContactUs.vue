@@ -1,7 +1,7 @@
 <template>
 <NavOther/>
 <div class="slide-img">
-    <img src="../assets/footer-bg-2.jpg">
+    <img src="../assets/contact.jpg">
 </div>
 <div class="contact-form">
     <p class="sect-title">General Inquiries</p>
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" v-model="formData.email">
+            <input type="text" id="subject" v-model="formData.subject">
         </div>
 
         <div class="form-group">
@@ -75,9 +75,17 @@ export default {
   
 <style scoped>
 .slide-img{
-    width: 100%;
-    overflow: hidden;
-    height: 250px;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 .contact-form {
     max-width: 400px;
