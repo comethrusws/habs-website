@@ -19,7 +19,7 @@ export default {
             ],
             currentIndex: 0,
             intervalId: null,
-            intervalDuration: 4500,
+            intervalDuration: 4000,
         };
     },
     computed: {
@@ -57,11 +57,12 @@ export default {
   height: 100%;
   object-fit: cover;
   position: absolute;
+  transition: transform opacity 0.6s ease-out;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: transform opacity 0.5s ease-out;
 }
 
 .fade-enter,

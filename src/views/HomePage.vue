@@ -22,7 +22,8 @@
                         Himalayan Academy Boarding School is a nurturing educational institution dedicated to fostering holistic development in elementary students.
                         <br><br>At our school, we prioritize not only academic achievement but also the spiritual, moral, and relational growth of our students. We believe in instilling values that go beyond textbooks, encouraging a sense of purpose and fulfillment in their journey towards excellence. <br>
                         <br>Please Also check our School Calendar.
-                    </p>
+                    </p><br>
+                    <button class="sub">School Calendar</button>
                 </div>
             </div>
         </div>
@@ -69,6 +70,8 @@ export default {
 <style scoped>
 .welcome-section {
     padding: 40px 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -128,6 +131,17 @@ export default {
 .welcome-text p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
+}
+
+.sub{
+    padding: 10px 20px;
+    background-color: #e22249;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    outline: none;
 }
 
 .video-section {

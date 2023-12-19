@@ -3,8 +3,8 @@
         <div class="registration-container">
             <div class="registration-row">
                 <div class="registration-box">
-                    <h3>Registration of Interest</h3>
-                    <button class="btext">Register</button>
+                    <h3>News & Notices</h3>
+                    <button @click="redirectToNotices" class="btext">Check Here</button>
                 </div>
                 <div class="registration-box">
                     <h3>Application of Admission</h3>
@@ -29,6 +29,9 @@
             redirectToContact() {
                 this.$router.push('/contact');
             },
+            redirectToNotices() {
+            this.$router.push('/notice');
+        },
         },
     }
     </script>

@@ -7,11 +7,12 @@
       <b>|   </b>
       <b class="login"><i class="fa-solid fa-lock"></i>  Student Login</b>
     </div>
-
-  <div class="navbar">
+  
     <div class="left-side">
       <router-link to="/" class="logo" ><img src="../assets/mlogo.png" alt="mlogo" class="logo" /></router-link>
     </div>
+
+  <div class="navbar">
 
     <div class="right-side">
       <router-link to="/admissions" class="nav-link">Admissions</router-link>
@@ -73,7 +74,7 @@ export default {
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: sticky;
   top: 0; 
   z-index: 999;
@@ -83,18 +84,22 @@ export default {
 .left-side {
   display: flex;
   align-items: center;
-  padding-left: 20px; 
+  justify-content: center;
+  padding-left: 50px; 
 }
 
 .logo {
   width: auto;
-  height: 40px; 
+  height: 55px; 
 }
 
 .right-side {
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding-right: 20px; 
+  padding-left: 20px;
   
 }
 
