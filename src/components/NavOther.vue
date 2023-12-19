@@ -76,7 +76,7 @@ export default {
 .nav-link:hover{
   font-style: normal;
   transition: 0.3s;
-  color: #ff4b4b;
+  color: #000000;
 }
 
 </style>
