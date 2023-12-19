@@ -71,7 +71,7 @@ export default {
 .navbar {
   width: 100%;
   height: 40px;
-  background-color: rgb(255, 255, 255);
+  background-color: #e22249;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +108,7 @@ export default {
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: inline-block;
   margin-right: 20px; 
   line-height: 40px;

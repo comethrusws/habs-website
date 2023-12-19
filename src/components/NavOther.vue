@@ -36,7 +36,7 @@ export default {
 .navbar {
   width: 100%;
   height: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: #e22249;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +70,7 @@ export default {
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-right: 15px; 
 }
 .nav-link:hover{
