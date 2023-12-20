@@ -11,15 +11,15 @@
             <form @submit.prevent="submitForm" id="adForm">
                 <div class="form-group">
                     <label for="firstname">First Name:</label>
-                    <input type="text" id="fname" v-model="formData.firstname" required>
+                    <input type="text" id="firstname"  required>
                 </div>
                 <div class="form-group">
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" id="name" v-model="formData.middlename">
+                    <input type="text" id="middlename" >
                 </div>
                 <div class="form-group">
                     <label for="surnamename">Surname:</label>
-                    <input type="text" id="name" v-model="formData.surname" required>
+                    <input type="text" id="surname" required>
                 </div>
 
                 <div class="form-group select">
