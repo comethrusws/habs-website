@@ -69,4 +69,17 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .slideshow {
+    height: 300px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .slideshow {
+    height: 200px; 
+  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
 <NavOther />
 <div class="slide-img">
-    <img src="../assets/contact.jpg">
+    <img src="../assets/1702892974748.jpg">
 </div>
 
 <div class="container">
