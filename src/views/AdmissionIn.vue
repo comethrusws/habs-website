@@ -11,15 +11,15 @@
             <form @submit.prevent="submitForm" id="adForm">
                 <div class="form-group">
                     <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname"  required>
+                    <input type="text" id="firstname" name="firstname"  required>
                 </div>
                 <div class="form-group">
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" id="middlename" >
+                    <input type="text" id="middlename" name="middlename" >
                 </div>
                 <div class="form-group">
                     <label for="surnamename">Surname:</label>
-                    <input type="text" id="surname" required>
+                    <input type="text" id="surname" name="surname" required>
                 </div>
 
                 <div class="form-group select">
