@@ -117,30 +117,19 @@ export default {
         }
     },
     methods: {
-  submitForm() {
-    emailjs.sendForm('service_cf5kaha', 'template_szexsiv', '#adForm', {
-      firstname: this.formData.firstname,
-      middlename: this.formData.middlename,
-      surname: this.formData.surname,
-      email: this.formData.email,
-      age: this.formData.age,
-      grade: this.formData.grade,
-      parentName: this.formData.parentName,
-      contactNumber: this.formData.contactNumber,
-      transportation: this.formData.transportation,
-      fullName: this.fullName 
-    })
-    .then((result) => {
-      console.log('Email sent successfully!', result.text);
-      alert('Form submitted successfully!');
-    })
-    .catch((error) => {
-      console.error('Error sending email:', error);
-      alert('Error submitting form. Please try again.');
-    });
-  },
+        submitForm() {
+            emailjs.sendForm('service_cf5kaha', 'template_szexsiv', '#adForm')
+                .then((result) => {
+                    console.log('Email sent successfully!', result.text);
+                    alert('Form submitted successfully!');
+                }, (error) => {
+                    console.error('Error sending email:', error);
+                    alert('Error submitting form. Please try again.');
+                });
+        },
+    }
 }
-}
+
 </script>
 
 <style scoped>
