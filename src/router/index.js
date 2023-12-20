@@ -5,6 +5,8 @@ import AdmissionIn from '../views/AdmissionIn.vue'
 import NoticeBoard from '../views/NoticeBoard.vue'
 import PhotoGallery from '../views/PhotoGallery.vue'
 import ContactUs from '../views/ContactUs.vue'
+import CalendarView from '../views/CalendarView.vue'
+
 const routes = [
   {
     path: '/',
@@ -16,6 +18,8 @@ const routes = [
   {  path: '/notice', component: NoticeBoard, meta: { title: 'Notices' } },
   {  path: '/contact', component: ContactUs, meta: { title: 'Contact Us' } },
   {  path: '/gallery', component: PhotoGallery, meta: { title: 'Gallery' } },
+  {  path: '/calendar', component: CalendarView, meta: { title: 'Calendar' } },
+
 
 ];
 
