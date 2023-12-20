@@ -11,11 +11,11 @@
             <form @submit.prevent="submitForm" id="adForm">
                 <div class="form-group">
                     <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname"  required>
+                    <input type="text" id="firstname" name="firstname" required>
                 </div>
                 <div class="form-group">
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" id="middlename" name="middlename" >
+                    <input type="text" id="middlename" name="middlename">
                 </div>
                 <div class="form-group">
                     <label for="surnamename">Surname:</label>
@@ -85,8 +85,6 @@
 <FooterBar />
 </template>
 
-  
-  
 <script>
 import NavOther from '../components/NavOther.vue'
 import FooterBar from '../components/FooterBar.vue'
@@ -113,23 +111,38 @@ export default {
             }
         };
     },
+    computed: {
+        fullName() {
+            return `${this.formData.firstname} ${this.formData.middlename} ${this.formData.surname}`.trim();
+        }
+    },
     methods: {
-        submitForm() {
-            emailjs.sendForm('service_cf5kaha', 'template_szexsiv', '#adForm')
-                .then((result) => {
-                    console.log('Email sent successfully!', result.text);
-                    alert('Form submitted successfully!');
-
-                }, (error) => {
-                    console.error('Error sending email:', error);
-                    alert('Error submitting form. Please try again.');
-                });
-        },
-    }
+  submitForm() {
+    emailjs.sendForm('service_cf5kaha', 'template_szexsiv', '#adForm', {
+      firstname: this.formData.firstname,
+      middlename: this.formData.middlename,
+      surname: this.formData.surname,
+      email: this.formData.email,
+      age: this.formData.age,
+      grade: this.formData.grade,
+      parentName: this.formData.parentName,
+      contactNumber: this.formData.contactNumber,
+      transportation: this.formData.transportation,
+      fullName: this.fullName 
+    })
+    .then((result) => {
+      console.log('Email sent successfully!', result.text);
+      alert('Form submitted successfully!');
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      alert('Error submitting form. Please try again.');
+    });
+  },
+}
 }
 </script>
-  
-  
+
 <style scoped>
 /* Default styles for larger screens */
 .container {
