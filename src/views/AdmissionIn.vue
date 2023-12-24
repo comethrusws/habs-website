@@ -54,8 +54,12 @@
                     <label for="contactNumber">Contact Number:</label>
                     <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
 
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required><br><br>
+
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required><br><br>
+
                 </div>
 
                 <div class="form-group select">
@@ -106,6 +110,7 @@ export default {
                 grade: '',
                 parentName: '',
                 contactNumber: '',
+                address: '',
                 email: '',
                 transportation: '',
             }
