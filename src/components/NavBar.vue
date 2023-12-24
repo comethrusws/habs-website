@@ -20,7 +20,6 @@
       <router-link to="/notice" class="nav-link">Notice Board</router-link>
       <router-link to="/gallery" class="nav-link">Gallery</router-link>
       <router-link to="/contact" class="nav-link">Contact Us</router-link>
-
     </div>
   </div>
 </template>
@@ -28,6 +27,16 @@
 <script>
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      showNavLinks: false
+    };
+  },
+  methods: {
+    toggleNavLinks() {
+      this.showNavLinks = !this.showNavLinks;
+    }
+  }
 };
 </script>
 
@@ -118,6 +127,67 @@ export default {
   background-color: #e4e4e4;
   transition: 0.3s;
   color: #ff4b4b;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.change .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change .line:nth-child(2) {
+  opacity: 0;
+}
+
+.change .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav-link {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .show-links {
+    display: block;
+  }
 }
 
 </style>

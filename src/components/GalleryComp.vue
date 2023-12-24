@@ -1,22 +1,26 @@
 <template>
     <div class="grid-gallery">
-      <div class="grid-container">
-        <img
-          v-for="(image, index) in images"
-          :key="index"
-          :src="image.src"
-          :alt="'Image ' + (index + 1)"
-          @click="openModal(index)"
-          class="grid-image"
-        />
-      </div>
-  
-      <div v-if="selectedImage !== null" class="modal" @click="closeModal">
-        <span class="close">&times;</span>
-        <img :src="images[selectedImage].src" :alt="'Image ' + (selectedImage + 1)" class="modal-content" />
-      </div>
+    <div class="grid-container">
+      <img
+        v-for="(image, index) in images"
+        :key="index"
+        :src="image.src"
+        :alt="'Image ' + (index + 1)"
+        @click="openModal(index)"
+        class="grid-image"
+      />
     </div>
-  </template>
+
+    <div v-if="selectedImage !== null" class="modal" @click="closeModal">
+      <span class="close">&times;</span>
+      <img
+        :src="images[selectedImage].src"
+        :alt="'Image ' + (selectedImage + 1)"
+        class="modal-content"
+      />
+    </div>
+  </div>
+</template>
   
   <script>
   export default {
@@ -48,7 +52,7 @@
     methods: {
       openModal(index) {
         this.selectedImage = index;
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
       },
       closeModal() {
         this.selectedImage = null;
@@ -59,53 +63,52 @@
   </script>
   
   <style scoped>
-  /* Styles for the gallery and modal */
   .grid-gallery {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px
-  }
-  
-  .grid-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-  }
-  
-  .close {
-    color: white;
-    font-size: 40px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
   </style>
   

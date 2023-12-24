@@ -23,7 +23,10 @@
                         <br><br>At our school, we prioritize not only academic achievement but also the spiritual, moral, and relational growth of our students. We believe in instilling values that go beyond textbooks, encouraging a sense of purpose and fulfillment in their journey towards excellence. <br>
                         <br>Please Also check our School Calendar.
                     </p><br>
-                    <button class="sub">School Calendar</button>
+                    <router-link to="/calendar" class="nav-link">
+                        <button class="sub">School Calendar</button>
+                    </router-link>
+                   
                 </div>
             </div>
         </div>
