@@ -11,7 +11,7 @@
       <router-link to="/notice" class="nav-link">Notice Board</router-link>
       <router-link to="/gallery" class="nav-link">Gallery</router-link>
       <router-link to="/contact" class="nav-link">Contact Us</router-link>
-      <b class="login"> <i class="fa-solid fa-lock"></i>  Student Login</b>
+      <b class="login"> <i class="fa-solid fa-lock"></i>  Student Login</b> 
 
     </div>
   </div>
