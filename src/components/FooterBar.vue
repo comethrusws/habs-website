@@ -8,7 +8,7 @@
                     <li><router-link to="/about">About Us</router-link></li>
                     <li><router-link to="/admissions">Admissions</router-link></li>
                     <li><a href="#">events</a></li>
-                    <li><router-link to="/gallery"></router-link>Gallery</li>
+                    <li><router-link to="/gallery">Gallery</router-link></li>
                 </ul>
             </div>
             <div class="footer-col">
