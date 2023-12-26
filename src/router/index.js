@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     component: HomePage,
-    meta: { title: 'Home - HABS' }
+    meta: { title: 'Home - Himalayan Academy  Boarding School' }
   },
   { path: '/about', component: AboutUs, meta: { title: 'About Us' }  },
   {  path: '/admissions', component: AdmissionIn, meta: { title: 'Admissions' } },

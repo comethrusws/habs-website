@@ -5,10 +5,10 @@
             <div class="footer-col">
                 <h4>HABS</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">Admissions</a></li>
+                    <li><router-link to="/about">About Us</router-link></li>
+                    <li><router-link to="/admissions">Admissions</router-link></li>
                     <li><a href="#">events</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><router-link to="/gallery"></router-link>Gallery</li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -17,13 +17,13 @@
                     <li><a href="#">community</a></li>
                     <li><a href="#">community voices</a></li>
                     <li><a href="#">recently at HABS</a></li>
-                    <li><a href="#">calendar</a></li>
+                    <li><router-link to="/calendar">Calendar</router-link></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Administration</h4>
                 <ul>
-                    <li><a href="#">Calendar</a></li>
+                    <li><router-link to="/calendar">Calendar</router-link></li>
                     <li><a href="#">News & Media</a></li>
                     <li><a href="#">Work at HABS</a></li>
                     <li><a href="#">Contact Us</a></li>
