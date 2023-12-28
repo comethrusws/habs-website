@@ -53,6 +53,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #cf1d41;
+
     }
     
     .registration-box {

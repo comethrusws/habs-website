@@ -99,7 +99,7 @@
         </div>
     </div>
     <br>
-    <ApplyBarVue />
+    <ApplyOth />
     <FooterBar />
 </div>
 </template>
@@ -107,13 +107,13 @@
 <script>
 import FooterBar from '@/components/FooterBar.vue';
 import NavOther from '../components/NavOther.vue';
-import ApplyBarVue from '@/components/ApplyBar.vue';
+import ApplyOth from '@/components/ApplyOth.vue';
 export default {
     name: 'AboutUs',
     components: {
         NavOther,
         FooterBar,
-        ApplyBarVue,
+        ApplyOth,
     }
 }
 </script>

@@ -53,12 +53,13 @@ export default{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #cf1d41;
 }
 
 .registration-box {
     flex: 0 0 30%;
     text-align: center;
-    padding: 30px;
+    padding: 50px;
     padding-bottom: 60px;
     background-color: #e22249;
 }
