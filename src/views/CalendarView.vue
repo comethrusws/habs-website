@@ -24,10 +24,9 @@ export default {
   methods: {
     async downloadPDF() {
       try {
-        const response = await fetch('@/assets/calendar/Q3_calendar.pdf');
+        const response = await fetch('http://localhost:3000/download-calendar');
         const blob = await response.blob();
 
-        // Create the link and trigger download
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'Q3calendar.pdf';
