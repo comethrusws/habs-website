@@ -47,7 +47,7 @@ import FooterBar from '@/components/FooterBar.vue';
 import NavOther from '../components/NavOther.vue';
 import ApplyOth from '../components/ApplyOth.vue';
 
-import { firestore } from '@/firebase.js';
+import axios from 'axios';
 
 export default {
     components: {NavOther,ApplyOth,FooterBar},
@@ -64,17 +64,8 @@ export default {
     methods: {
     async submitForm() {
       try {
-        const db = firestore;
-        const formData = this.formData;
-
-        await db.collection('formSubmissions').add({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        });
-
-        console.log('Form submitted to Firestore!');
+        const response = await axios.post('http://localhost:3000/submit-form', this.formData);
+        console.log('Form submitted!', response.data);
         this.formData = {
           name: '',
           email: '',
@@ -82,10 +73,10 @@ export default {
           message: ''
         };
       } catch (error) {
-        console.error('Error submitting form to Firestore:', error);
+        console.error('Error submitting form:', error);
       }
     }
-  }
+  },
 };
 </script>
   
