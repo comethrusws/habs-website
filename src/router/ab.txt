@@ -7,7 +7,11 @@ import PhotoGallery from '../views/PhotoGallery.vue'
 import ContactUs from '../views/ContactUs.vue'
 import CalendarView from '../views/CalendarView.vue'
 
-const routes = [
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+
   {
     path: '/',
     component: HomePage,
@@ -21,12 +25,8 @@ const routes = [
   {  path: '/calendar', component: CalendarView, meta: { title: 'Calendar' } },
 
 
-];
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-});
+]
+})
 
 router.beforeEach((to, from, next) => {
   const defaultTitle = 'Home|HABS'; 
@@ -34,4 +34,5 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-export default router;
+
+export default router
